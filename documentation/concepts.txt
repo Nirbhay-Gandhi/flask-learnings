@@ -1,0 +1,55 @@
+1. virtual env
+concept of virtual env in python. https://www.geeksforgeeks.org/python-virtual-environment/
+
+pip install virtualenv
+virtualenv my_env  #create a virtualenv
+virtualenv -p /usr/bin/python3 virtualenv_name  #(optional) can even specify python interpreter of your choice
+
+#activate virtual env in python
+cd <envname>
+Scripts\activate  (windows)
+
+source virtualenv_name/bin/activate  (linux)
+
+
+#Installing Dependencies in Virtual Environment Python
+(virtualenv_name)$ pip install Django==1.9
+
+
+#Deactivate Python Virtual Environment
+(virtualenv_name)$ deactivate
+
+
+2. Running flask application
+cd <flask_app__dir>
+
+# set the env variable to the file, that we want to be our flask application
+set FLASK_APP=flask_blog.py  #windows
+export FLASK_APP=flask_blog.py  #linux 
+#flask_blog.py is the python file u want to run the flask application on
+
+
+#to run
+flask run
+
+#Documentation
+https://flask.palletsprojects.com/en/stable/quickstart/
+
+
+#run the flask app using Windows power shell
+1. activate the virtual env - go to the folder where you have installed the virtual env. 
+then run - Scripts\activate
+
+2. $env:FLASK_APP = "flask_blog.py"
+$env:FLASK_DEBUG = 1  #TO ENABLE DEBUG MODE
+
+3. Go the the project directory
+flask run
+
+4. go to the url provided with the ip address
+ex: http://127.0.0.1:5000/
+or: http://localhost:5000/
+
+localhost <-> alias <-> for the local ip address
+
+5. Flask learnings

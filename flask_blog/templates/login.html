@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block blog_content %}
+    
+    <div>
+        <form method="POST" action="">
+            {{  form.hidden_tag() }}
+            <div>
+                {{ form.username.label() }}<br>
+                {{ form.username(size=32) }}<br>
+            </div>
+        </form>
+    </div>
+
+{% endblock blog_content%}
